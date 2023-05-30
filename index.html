@@ -25,6 +25,9 @@
         <a-assets>
           <a-gltf-model id="casa_glb" shadow="receive:true;cast:true;" src="assets/objects/casa.glb"  crossorigin="anonymous"></a-gltf-model>
           <a-gltf-model id="perro_glb" shadow="receive:true;cast:true;" src="assets/objects/perro.glb"  crossorigin="anonymous"></a-gltf-model>
+          <a-gltf-model id="perro_glb2" shadow="receive:true;cast:true;" src="assets/objects/perro.glb"  crossorigin="anonymous"></a-gltf-model>
+          <a-gltf-model id="avatar" shadow="receive:true;cast:true;" src="assets/objects/avatar.glb"  crossorigin="anonymous"></a-gltf-model>
+
           <img id="cielo" src="assets/img/entorno.jpg">
         </a-assets>
 
@@ -34,6 +37,8 @@
         <!-- Objetos -->
         <a-box class="interactable" src="./assets/img/push me.png" position="-5 15 0" rotation="0 0 0" scale="3 3 3"></a-box>
         <a-entity id="perro" gltf-model="#perro_glb"  position="-4 4 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="perro2" gltf-model="#perro_glb2"  position="-8 4 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="avatar" gltf-model="#avatar"  position="-25 4 40" rotation="0 0 0" scale="7 7 7"></a-entity>
 
         <a-sky src="#cielo"></a-sky>
 
@@ -47,8 +52,8 @@
           wasd-controls
           look-controls="pointerLockEnabled: false"
           simple-navmesh-constraint="navmesh:.navmesh;fall:0.5;height:5;exclude:.navmesh-hole;"
-          movement-controls="speed:10;camera:#head;"
-          position="-5 13 10" rotation="0 0 0" >
+          movement-controls="speed:30;camera:#head;"
+          position="-25 13 50" rotation="0 0 0" >
           <a-entity id="head"
             camera="near:0.01;"
             position="0 2 0">
